@@ -80,3 +80,5 @@ is good if you want (for example) to update values using a REST handler.
 __Related Topics:__ [[%SYSTEMWEB%.Contribs][Contribs]], %SYSTEMWEB%.DeveloperDocumentationCategory, %SYSTEMWEB%.AdminDocumentationCategory, %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences
 
 <!-- Do _not_ attempt to edit this topic; it is auto-generated. -->
+%META:FILEATTACHMENT{name="example_stars.gif" attachment="example_stars.gif" attr="" comment="" date="" path="example_stars.gif" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="edit_example.gif" attachment="edit_example.gif" attr="" comment="" date="" path="edit_example.gif" user="ProjectContributor" version="1"}%
