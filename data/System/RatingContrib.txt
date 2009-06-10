@@ -1,7 +1,7 @@
 ---+!! !RatingContrib
 <!--
 One line description, required for extensions repository catalog.
-   * Set SHORTDESCRIPTION = Rating widget for TWiki forms
+   * Set SHORTDESCRIPTION = Rating widget for forms
 -->
 %SHORTDESCRIPTION%
 
@@ -10,17 +10,13 @@ One line description, required for extensions repository catalog.
 This is a rating widget that can support a "line of stars" style input field.
 
 ---++ Usage
----+++ In TWiki < 4.2
-The rating widget can be used with the [[Foswiki:Extensions.VotePlugin][VotePlugin]]. The widget is like the [[Foswiki:Extensions.JSCalendarContrib][JSCalendarContrib]] in that once it is installed, it can be used with any plugin that requires a line - of - stars rating bar. 
-
----+++ In TWiki 4.2 and later
 You can use the new =rating= type in form fields. The result of the rating is captured as an integer, and displayed as a line of stars. For example,
 
 <img src="%ATTACHURLPATH%/example_stars.gif" />
 
-Install the contrib into your TWiki. You can immediately use the =rating= type in your forms. Rating values are stored as integers.
+Install the contrib. You can immediately use the =rating= type in your forms. Rating values are stored as integers.
 
-To use it in a TWiki form, use the type =rating=, with the optional modified =+small= for small stars. The size field dictates how wide the rating is e.g. 5 means a 5 star range. The value field specifies the initial value. For example, the form definition:
+To use it in a form, use the type =rating=, with the optional modified =+small= for small stars. The size field dictates how wide the rating is e.g. 5 means a 5 star range. The value field specifies the initial value. For example, the form definition:
 
 <verbatim>
 | *Name*     | *Type*       | *Size* | *Values* |
@@ -41,7 +37,7 @@ A typical application of this widget is its use to capture a rating
 under the control of a plugin. It is straightforward to use in this role.
 The API to the contrib is:
 
-=TWiki::Contrib::RatingContrib::renderRating($name, $size, $small, $value, $input_attrs) -> $html=
+=Foswiki::Contrib::RatingContrib::renderRating($name, $size, $small, $value, $input_attrs) -> $html=
 
 where
    * =$name= is the name you want to give to the =input= element that will get the rating value
@@ -55,14 +51,14 @@ For example, let's say we want to generate a conventional form that contains a l
 <verbatim>
 my $html =
    CGI::form({action="some url", method=>"post"},
-       TWiki::Contrib::RatingContrib::renderRating('rating', 5, 0, 0, {})
+       Foswiki::Contrib::RatingContrib::renderRating('rating', 5, 0, 0, {})
       .CGI::submit("OK"));
 </verbatim>
 
 Say instead that we want to generate an alert when a line of stars has its
 value changed:
 <verbatim>
-$html = TWiki::Contrib::RatingContrib::renderRating('rating', 5, 0, 0,
+$html = Foswiki::Contrib::RatingContrib::renderRating('rating', 5, 0, 0,
         {onchange=>'javascript: alert("Rated")'})
 </verbatim>
 Of course, when you use the =onchange= event, you don't need a form. This model
@@ -75,6 +71,7 @@ is good if you want (for example) to update values using a REST handler.
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
 |  Contrib Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  10 Jun 2009: | Foswikitask:1258: port to Foswiki |
 |  27 Jun 2006: | First version |
 |  Dependencies: | %$DEPENDENCIES% |
 |  Contrib Home: | http://twiki.org/cgi-bin/view/Plugins/RatingContrib |

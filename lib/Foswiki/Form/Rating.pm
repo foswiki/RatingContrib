@@ -1,18 +1,18 @@
 # See bottom of file for license and copyright details
-# This packages subclasses TWiki::Form::FieldDefinition to implement
+# This packages subclasses Foswiki::Form::FieldDefinition to implement
 # the =date= type
 
-package TWiki::Form::Rating;
-use base 'TWiki::Form::FieldDefinition';
+package Foswiki::Form::Rating;
+use base 'Foswiki::Form::FieldDefinition';
 
 use strict;
 
 sub new {
     my $class = shift;
-    my $this = $class->SUPER::new( @_ );
-    my $size = $this->{size} || '';
+    my $this  = $class->SUPER::new(@_);
+    my $size  = $this->{size} || '';
     $size =~ s/[^\d]//g;
-    $size = 5 if( !$size || $size < 1 );
+    $size = 5 if ( !$size || $size < 1 );
     $this->{size} = $size;
 
     return $this;
@@ -20,23 +20,28 @@ sub new {
 
 # Render line of stars
 sub renderForEdit {
-    my( $this, $web, $topic, $value ) = @_;
+    my ( $this, $web, $topic, $value ) = @_;
 
-    my $useSmall = ($this->{type} =~ /\+small/);
-    require TWiki::Contrib::RatingContrib;
-    return ('', TWiki::Contrib::RatingContrib::renderRating(
-        $this->{name}, $this->{size}, $useSmall, $value, {}));
+    my $useSmall = ( $this->{type} =~ /\+small/ );
+    require Foswiki::Contrib::RatingContrib;
+    return (
+        '',
+        Foswiki::Contrib::RatingContrib::renderRating(
+            $this->{name}, $this->{size}, $useSmall, $value, {}
+        )
+    );
 }
 
 # Render the lines of stars for display only
 sub renderForDisplay {
-    my( $this, $format, $value, $attrs ) = @_;
+    my ( $this, $format, $value, $attrs ) = @_;
 
-    my $useSmall = ($this->{type} =~ /\+small/);
-    require TWiki::Contrib::RatingContrib;
-    $value = TWiki::Contrib::RatingContrib::renderRating(
-        $this->{name}, $this->{size}, $useSmall, $value, undef);
-    $value =~ s/\n//g;
+    my $useSmall = ( $this->{type} =~ /\+small/ );
+    require Foswiki::Contrib::RatingContrib;
+    $value =
+      Foswiki::Contrib::RatingContrib::renderRating( $this->{name},
+        $this->{size}, $useSmall, $value, undef );
+    $value  =~ s/\n//g;
     $format =~ s/\$title/$this->{title}/g;
     $format =~ s/\$value/$value/g;
 
