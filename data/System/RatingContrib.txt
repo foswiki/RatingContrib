@@ -66,18 +66,17 @@ is good if you want (for example) to update values using a REST handler.
 
 ---++ Contrib Info
 
-|  Contrib Author(s): | Crawford Currie http://c-dot.co.uk |
+|  Author(s): | Crawford Currie http://c-dot.co.uk |
 |  Copyright: | &copy; 2007 C-Dot Consultants |
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
-|  Contrib Version: | %$VERSION% |
+|  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
 |  10 Jun 2009: | Foswikitask:1258: port to Foswiki |
 |  27 Jun 2006: | First version |
 |  Dependencies: | %$DEPENDENCIES% |
-|  Contrib Home: | http://twiki.org/cgi-bin/view/Plugins/RatingContrib |
-|  Feedback: | http://twiki.org/cgi-bin/view/Plugins/RatingContribDev |
-|  Appraisal: | http://twiki.org/cgi-bin/view/Plugins/RatingContribAppraisal |
+|  Home: | http://foswiki.org/Extensions/RatingContrib |
+|  Support: | http://foswiki.org/Support/RatingContrib |
 
 __Related Topics:__ [[%SYSTEMWEB%.Contribs][Contribs]], %SYSTEMWEB%.DeveloperDocumentationCategory, %SYSTEMWEB%.AdminDocumentationCategory, %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences
 
-<!-- Do _not_ attempt to edit this topic; it is auto-generated. Please add comments/questions/remarks to the feedback topic on twiki.org instead. -->
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->

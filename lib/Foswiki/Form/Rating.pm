@@ -51,11 +51,14 @@ sub renderForDisplay {
 1;
 __DATA__
 
-Module of Foswiki - The Free and Open Source Wiki, http://foswiki.org/, http://TWiki.org/
+Module of Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 
-Copyright (C) 2001-2007 TWiki Contributors. All Rights Reserved.
-TWiki Contributors are listed in the AUTHORS file in the root of
+Copyright (C) 2001-2009 Foswiki Contributors. All Rights Reserved.
+Foswiki Contributors are listed in the AUTHORS file in the root of
 this distribution. NOTE: Please extend that file, not this notice.
+
+Additional copyrights apply to some of the code in this file as follows:
+Copyright (C) 2001-2007 TWiki Contributors. All Rights Reserved.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
