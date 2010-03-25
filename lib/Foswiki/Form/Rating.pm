@@ -3,7 +3,8 @@
 # the =date= type
 
 package Foswiki::Form::Rating;
-use base 'Foswiki::Form::FieldDefinition';
+use Foswiki::Form::FieldDefinition;
+our @ISA = qw( Foswiki::Form::FieldDefinition );
 
 use strict;
 
