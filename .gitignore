@@ -1,0 +1,9 @@
+*.swp
+igp_*
+RatingContrib.md5
+RatingContrib.sha1
+RatingContrib.tgz
+RatingContrib.txt
+RatingContrib.zip
+RatingContrib_installer
+RatingContrib_installer.pl

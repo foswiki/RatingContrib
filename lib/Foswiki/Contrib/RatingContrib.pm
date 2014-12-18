@@ -7,7 +7,7 @@ require Foswiki::Func;    # The plugins API
 
 use vars qw( $VERSION $RELEASE $SHORTDESCRIPTION );
 
-$VERSION          = '$Rev$';
+$VERSION          = '10 Jun 2009';
 $RELEASE          = '10 Jun 2009';
 $SHORTDESCRIPTION = '';
 
